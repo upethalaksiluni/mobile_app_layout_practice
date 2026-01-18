@@ -75,136 +75,155 @@ class _MyHomePageState extends State<MyHomePage> {
     // The Flutter framework has been optimized to make rerunning build methods
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
-    return Scaffold(
-      appBar: AppBar(
-        // TRY THIS: Try changing the color here to a specific color (to
-        // Colors.amber, perhaps?) and trigger a hot reload to see the AppBar
-        // change color while the other colors stay the same.
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        // Here we take the value from the MyHomePage object that was created by
-        // the App.build method, and use it to set our appbar title.
-        title: Center( child: Text(widget.title, textAlign: TextAlign.center,),),
-      ),
-      body: Center(
-        // Center is a layout widget. It takes a single child and positions it
-        // in the middle of the parent.
-        child: Container(
-          child: Column(
-            children: [
-              Container(
-                margin: EdgeInsets.only(top: 34),
-                child: Text(
-                  'Welcome to Flutter!',
-                  style: TextStyle(
-                    fontSize: 22,
-                    fontWeight: FontWeight.bold,
+    return SafeArea(
+      child: Scaffold(
+        appBar: AppBar(
+          // TRY THIS: Try changing the color here to a specific color (to
+          // Colors.amber, perhaps?) and trigger a hot reload to see the AppBar
+          // change color while the other colors stay the same.
+          backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+          // Here we take the value from the MyHomePage object that was created by
+          // the App.build method, and use it to set our appbar title.
+          title: Center( child: Text(widget.title, textAlign: TextAlign.center,),),
+        ),
+        body: Center(
+          // Center is a layout widget. It takes a single child and positions it
+          // in the middle of the parent.
+          child: Container(
+            child: Column(
+              children: [
+                Container(
+                  margin: EdgeInsets.only(top: 34),
+                  child: Text(
+                    'Welcome to Flutter!',
+                    style: TextStyle(
+                      fontSize: 22,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
                 ),
-              ),
-
-              Container(
-                height: 45,
-                width: 500,
-                margin: EdgeInsets.only(top: 34),
-                child: ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.lightGreen,
-                    shape: const RoundedRectangleBorder(
-                      borderRadius: BorderRadius.zero,
-                    )
-                  ),
-                  onPressed: () {},
-                  child: const Text(
-                    'Hello, Flutter!',
-                    style: TextStyle(color: Colors.white),
-                  ),
-                ),
-              ),
-              Column(
-                children: [Row(
-                  children: [
-                    Container(
-                      width: 137,
-                      height: 70,
-                      margin: EdgeInsets.only(top: 24),
-                      color: Colors.red,
-                      child: Center(child: Text('Box 1')),
-                    ),
-                    Container(
-                      width: 137,
-                      height: 70,
-                      margin: EdgeInsets.only(top: 24),
-                      color: Colors.green,
-                      child: Center(child: Text('Box 2')),
-                    ),
-                    Container(
-                      width: 137,
-                      height: 70,
-                      margin: EdgeInsets.only(top: 24),
-                      color: Colors.blue,
-                      child: Center(child: Text('Box 3')),
-                    ),
-                  ],
-                ),
-
-
-                  Container(
-                    margin: EdgeInsets.only(top: 25),
-                    child: Text('First Widget',
-                      style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20, color: Colors.black54)),
-                  ),
-
-                  Container(
-                    height: 45,
-                    width: 500,
-                    margin: EdgeInsets.only(top: 34),
-                    child: ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.lightGreen,
-                          shape: const RoundedRectangleBorder(
-                            borderRadius: BorderRadius.zero,
-                          )
-                      ),
-                      onPressed: () {},
-                      child: const Text(
-                        'Second Widget',
-                        style: TextStyle(color: Colors.white),
-                      ),
-                    ),
-                  ),
-
-                ]
-
-              ),
-
-              Container(
-                height: 45,
-                width: 500,
-                margin: EdgeInsets.only(top: 34),
-                child: ElevatedButton(
-                  style: ElevatedButton.styleFrom(
+      
+                Container(
+                  height: 45,
+                  width: 500,
+                  margin: EdgeInsets.only(top: 34),
+                  child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.lightGreen,
                       shape: const RoundedRectangleBorder(
                         borderRadius: BorderRadius.zero,
                       )
-                  ),
-                  onPressed: () {},
-                  child: const Text(
-                    'Third Widget',
-                    style: TextStyle(color: Colors.white),
+                    ),
+                    onPressed: () {},
+                    child: const Text(
+                      'Hello, Flutter!',
+                      style: TextStyle(color: Colors.white),
+                    ),
                   ),
                 ),
-              ),
-
-            ],
+                Column(
+                  children: [Row(
+                    children: [
+                      Container(
+                        width: 137,
+                        height: 70,
+                        margin: EdgeInsets.only(top: 24),
+                        color: Colors.red,
+                        child: Center(child: Text('Box 1')),
+                      ),
+                      Container(
+                        width: 137,
+                        height: 70,
+                        margin: EdgeInsets.only(top: 24),
+                        color: Colors.green,
+                        child: Center(child: Text('Box 2')),
+                      ),
+                      Container(
+                        width: 137,
+                        height: 70,
+                        margin: EdgeInsets.only(top: 24),
+                        color: Colors.blue,
+                        child: Center(child: Text('Box 3')),
+                      ),
+                    ],
+                  ),
+      
+      
+                    Container(
+                      margin: EdgeInsets.only(top: 25),
+                      child: Text('First Widget',
+                        style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20, color: Colors.black54)),
+                    ),
+      
+                    Container(
+                      height: 45,
+                      width: 500,
+                      margin: EdgeInsets.only(top: 34),
+                      child: ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                            backgroundColor: Colors.lightGreen,
+                            shape: const RoundedRectangleBorder(
+                              borderRadius: BorderRadius.zero,
+                            )
+                        ),
+                        onPressed: () {},
+                        child: const Text(
+                          'Second Widget',
+                          style: TextStyle(color: Colors.white),
+                        ),
+                      ),
+                    ),
+      
+                  ]
+      
+                ),
+      
+                Container(
+                  height: 45,
+                  width: 500,
+                  margin: EdgeInsets.only(top: 34),
+                  child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.lightGreen,
+                        shape: const RoundedRectangleBorder(
+                          borderRadius: BorderRadius.zero,
+                        )
+                    ),
+                    onPressed: () {},
+                    child: const Text(
+                      'Third Widgetss',
+                      style: TextStyle(color: Colors.white),
+                    ),
+                  ),
+                ),
+      
+                Spacer(),
+                Container(
+                  height: 45,
+                  width: 500,
+                  margin: EdgeInsets.only(top: 34),
+                  child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.amber,
+                        shape: const RoundedRectangleBorder(
+                          borderRadius: BorderRadius.zero,
+                        )
+                    ),
+                    onPressed: () {},
+                    child: const Text(
+                      'Footer text',
+                      style: TextStyle(color: Colors.white),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+      
           ),
-
+      
+      
         ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
+      
       ),
     );
   }
